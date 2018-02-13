@@ -81,4 +81,4 @@ The usual assignment protocol is followed:
 
 ### Due Date
 
-Your assignment must be submitted to Blackboard by 17:00 Tuesday 13 February 2018.les `x` and `y` that represent coordinates
+Your assignment must be submitted to Blackboard by 17:00 Tuesday 13 February 2018.
