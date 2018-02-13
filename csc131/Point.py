@@ -32,7 +32,7 @@ class Point:
     def __le__(self,other):
         if not isinstance(other, Point):
             return False
-        return self.origin_distance() < other.origin_distance() or self.origin_distance() == other.origin_distance
+        return self.origin_distance() < other.origin_distance() or self.origin_distance() == other.origin_distance()
 
     def __gt__(self,other):
         if not isinstance(other, Point):
