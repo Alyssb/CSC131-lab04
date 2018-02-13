@@ -32,7 +32,7 @@ class Point:
     def __le__(self,other):
         if not isinstance(other, Point):
             return False
-        return self.origin_distance() <= other.origin_distance
+        return self.origin_distance() < other.origin_distance or self.origin_distance() == other.origin_distance
 
     def __gt__(self,other):
         if not isinstance(other, Point):
@@ -42,7 +42,7 @@ class Point:
     def __ge__(self,other):
         if not isinstance(other, Point):
             return False
-        return self.origin_distance() >= other.origin_distance()
+        return self.origin_distance() > other.origin_distance() or self.origin_distance() == other.origin_distance()
 
     def distance(self, other) -> float:
         if not isinstance(other, Point):
@@ -57,6 +57,10 @@ class Point:
 
     def get_y(self):
         return self._y
+
+    def __str__(self):
+        thisisstupid = {}
+        return "({}, {})".format(self._x,self._y)
 
 
 def main():
