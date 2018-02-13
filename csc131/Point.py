@@ -25,22 +25,38 @@ class Point:
         return not self.__eq__(other)
 
     def __lt__(self,other):
-        return self._x < other._x and self._y < other._y
+        if not isinstance(other, Point):
+            return False
+        return self.origin_distance() < other.origin_distance
 
     def __le__(self,other):
-        return self._x <= other._x and self._y <= other._y
+        if not isinstance(other, Point):
+            return False
+        return self.origin_distance() <= other.origin_distance
 
     def __gt__(self,other):
-        return self._x > other._x and self._y > other._y
+        if not isinstance(other, Point):
+            return False
+        return self.origin_distance() > other.origin_distance()
 
     def __ge__(self,other):
-        return self._x >= other._x and self._y >= other._y
+        if not isinstance(other, Point):
+            return False
+        return self.origin_distance() >= other.origin_distance()
 
     def distance(self, other) -> float:
+        if not isinstance(other, Point):
+            raise TypeError
         return sqrt( (other._x - self._x)**2 + (other._y - self._y)**2)
 
     def origin_distance(self):
-        return sqrt(self._x**2 + self._y**2)
+        return self.distance(Point())
+
+    def get_x(self):
+        return self._x
+
+    def get_y(self):
+        return self._y
 
 
 def main():
