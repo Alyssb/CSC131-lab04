@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>20</y>
+      <w>290</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Thing&gt;&gt;
+csc131::Point
+--
+-_x: float
+-_y: float
+--
++ __init__(self, x: float = 0, y: float = 0)
++ __eq__(self, other: Point): bool
++ __ne__(self, other: Point): bool
++ __gt__(self, other: Point): bool
++ __ge__(self, other: Point): bool
++ __lt__(self, other: Point): bool
++ __le__(self, other: Point): bool
++__str__(self): str
++get_x(self): float
++get_y(self): float
++distance(self, other: Point): float
++origin_distance(self): float
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>370</x>
+      <y>20</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>"Private" instance variables,
+by convention, are named 
+using a leading underscore, 
+e.g., _name
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>300</x>
+      <y>50</y>
+      <w>90</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+</diagram>
