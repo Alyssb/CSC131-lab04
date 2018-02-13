@@ -2,15 +2,36 @@
 Lab 4: Introduction to Classes with a Point Class
 CSC131, Spring 2108
 Missouri State University
-Author: TODO: Replace this with your name in the form: Your Name <email@live.missouristate.edu>
+Author: Alyssa Slayton <ajs41@missouristate.edu>
 """
+from math import sqrt
 
 
 class Point:
     """
     A class that represents a point in a two-dimensional coordinate system.
     """
+
     # TODO: Implement this class as per the class diagram found in the README
+    def __init__(self, x_coord: float = 0, y_coord: float = 0):
+        self._x = x_coord
+        self._y = y_coord
+    def __eq__(self,other):
+        return self._x == other._x and self._y == other._y
+    def __ne__(self,other):
+        return self._x != other._x and self._y != other._y
+    def __lt__(self,other):
+        return self._x < other._x and self._y < other._y
+    def __le__(self,other):
+        return self._x <= other._x and self._y <= other._y
+    def __gt__(self,other):
+        return self._x > other._x and self._y > other._y
+    def __ge__(self,other):
+        return self._x >= other._x and self._y >= other._y
+    def distance(self, other) -> float:
+        return sqrt( (other._x - self._x)**2 + (other._y - self._y)**2)
+    def origin_distance(self):
+        return sqrt(self._x**2 + self._y**2)
 
 
 def main():
