@@ -17,8 +17,13 @@ class Point:
         self._x = x_coord
         self._y = y_coord
     def __eq__(self,other):
-        return self._x == other._x and self._y == other._y
+        if not isinstance(other, Point):
+            return False
+        else:
+            return self._x == other._x and self._y == other._y
     def __ne__(self,other):
+        if not isinstance(other, Point):
+            return False
         return self._x != other._x and self._y != other._y
     def __lt__(self,other):
         return self._x < other._x and self._y < other._y
